@@ -37,5 +37,5 @@ setup(
     ],
     packages=["VafabApi"],
     include_package_data=True,
-    install_requires=["dataclasses", "typing", "dataclasses_json", "json", "requests"]
+    install_requires=["dataclasses_json", "requests"]
 )
