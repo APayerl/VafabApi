@@ -19,7 +19,7 @@ setup(
     description="Helper to get pickup times for garbage",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://medium-multiply.readthedocs.io/",
+    url="https://github.com/APayerl/VafabApi",
     author="Anders Payerl",
     author_email="anders_payerl@msn.com",
     license="MIT",
