@@ -3,10 +3,11 @@
 import json
 import requests
 
-from .Types import SearchAddressResult, RhServices
+from .UnofficialTypes import SearchAddressResult, RhServices
 
 
-class Vafab:
+class VafabUnafficial:
+    @staticmethod
     def get_address_identifier(address: str) -> SearchAddressResult:
         response = requests.post(
             "https://services.vafabmiljo.se/FutureWebVKFHus/SimpleWastePickup/SearchAdress",
@@ -15,6 +16,7 @@ class Vafab:
         )
         return SearchAddressResult.from_dict(response.json())
 
+    @staticmethod
     def get_service_info(address: str) -> RhServices:
         r = requests.get(
             'https://services.vafabmiljo.se/FutureWebVKFHus/SimpleWastePickup/GetWastePickupSchedule',

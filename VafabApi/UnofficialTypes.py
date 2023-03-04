@@ -1,6 +1,7 @@
 from dataclasses import dataclass, field
-from typing import Any, List
+from typing import Any, List, Optional
 from dataclasses_json import dataclass_json, config
+
 
 @dataclass_json
 @dataclass(frozen=True)
@@ -17,10 +18,12 @@ class BinType:
 class Fee:
     """Fee data class"""
     description: str = field(metadata=config(field_name="Description"))
-    binType: BinType = field(metadata=config(field_name="BinType"))
+    binType: Optional[BinType] = field(metadata=config(field_name="BinType"))
     wastePickupsPerYear: int = field(metadata=config(field_name="WastePickupsPerYear"))
-    wastePickupFrequency: str = field(metadata=config(field_name="WastePickupFrequency"))
-    wastePickupFrequency_code: str = field(metadata=config(field_name="WastePickupFrequencyCode"))
+    wastePickupFrequency: Optional[str] = field(metadata=config(field_name="WastePickupFrequency"))
+    wastePickupFrequency_code: Optional[str] = field(metadata=config(field_name="WastePickupFrequencyCode"))
+    changeSizeOfBinText: Optional[str] = field(metadata=config(field_name="ChangeSizeOfBinText"))
+    changeFrequencyText: Optional[str] = field(metadata=config(field_name="ChangeFrequencyText"))
     wasteType: str = field(metadata=config(field_name="WasteType"))
     code: str = field(metadata=config(field_name="Code"))
     product: str = field(metadata=config(field_name="Product"))

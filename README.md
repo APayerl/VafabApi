@@ -1,17 +1,20 @@
 # VafabApi
 A small api wrapper to handle the complexity of getting the json and converting it to a typed object.
 
-### Installation
+## Warning
+Currently this uses a backward engineered API and could therefore break at any moment.
+
+## Installation
 ```
 pip install VafabApi
 ```
 
-### Get started
+## Get started
 How to use:
 
 ```Python
 # At this point VafabMiljö does not have an official API.
-from VafabApi.Unofficial import Vafab
+from VafabApi import VafabUnafficial as Vafab
 
 # Call with address
 address = "..."
